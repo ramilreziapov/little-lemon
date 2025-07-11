@@ -2,24 +2,36 @@ function Nav() {
   return (
     <nav>
       <img src="/LogoLL.svg" alt="Little Lemon Logo" />
-      <ul>
-        <li>
-          <a href="#home">Home</a>
+      <ul className="nav-list">
+        <li className="nav-item">
+          <a href="#home" className="nav-link">
+            Home
+          </a>
         </li>
-        <li>
-          <a href="#about">About</a>
+        <li className="nav-item">
+          <a href="#about" className="nav-link">
+            About
+          </a>
         </li>
-        <li>
-          <a href="#menu">Menu</a>
+        <li className="nav-item">
+          <a href="#menu" className="nav-link">
+            Menu
+          </a>
         </li>
-        <li>
-          <a href="#reservations">Reservations</a>
+        <li className="nav-item">
+          <a href="#reservations" className="nav-link">
+            Reservations
+          </a>
         </li>
-        <li>
-          <a href="#order-online">Order Online</a>
+        <li className="nav-item">
+          <a href="#order-online" className="nav-link">
+            Order Online
+          </a>
         </li>
-        <li>
-          <a href="#login">Login</a>
+        <li className="nav-item">
+          <a href="#login" className="nav-link">
+            Login
+          </a>
         </li>
       </ul>
     </nav>

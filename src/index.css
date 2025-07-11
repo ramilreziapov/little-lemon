@@ -24,12 +24,52 @@ code {
     "header header header header header header header header header header header header"
     "main main main main main main main main main main main main"
     "footer footer footer footer footer footer footer footer footer footer footer footer";
-  gap: 20px;
+  column-gap: 20px;
   background-color: #f3eb81;
   padding: 0% 70px;
 }
 
-.container > * {
+nav {
+  grid-area: nav;
+  display: flex;
   background-color: #f1a8f4;
-  /* padding: 20px; */
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+nav img {
+  width: 200px;
+  height: auto;
+  margin-top: 20px;
+}
+
+header {
+  grid-area: header;
+  background-color: #917c91;
+}
+
+main {
+  grid-area: main;
+  background-color: #f1a8f4;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #917c91;
+}
+
+.nav-list {
+  list-style: none;
+  margin-top: 40px;
+  padding: 0;
+}
+
+.nav-item {
+  display: inline;
+  margin-right: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
 }
