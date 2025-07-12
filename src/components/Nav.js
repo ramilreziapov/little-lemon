@@ -1,7 +1,10 @@
 function Nav() {
   return (
     <nav>
-      <img src="/LogoLL.svg" alt="Little Lemon Logo" />
+      <section className="logo">
+        <img src="/LogoLL.svg" alt="Little Lemon Logo" />
+      </section>
+
       <ul className="nav-list">
         <li className="nav-item">
           <a href="#home" className="nav-link">
