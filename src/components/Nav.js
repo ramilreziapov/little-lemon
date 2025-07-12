@@ -2,7 +2,7 @@ function Nav() {
   return (
     <nav>
       <img src="/LogoLL.svg" alt="Little Lemon Logo" />
-      <ul>
+      <ul className="nav-list">
         <li className="nav-item">
           <a href="#home" className="nav-link">
             Home
