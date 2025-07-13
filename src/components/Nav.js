@@ -32,7 +32,7 @@ function Nav() {
           </a>
         </li>
         <li className="nav-item">
-          <a href="#login" className="nav-link">
+          <a href="#login" className="nav-link-last">
             Login
           </a>
         </li>
