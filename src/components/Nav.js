@@ -37,6 +37,10 @@ function Nav() {
           </a>
         </li>
       </ul>
+      {/* Hamburger menu - hidden by default, shown in mobile */}
+      <div className="hamburger-menu">
+        <img src="/hamburger menu.svg" alt="Menu" />
+      </div>
     </nav>
   );
 }
