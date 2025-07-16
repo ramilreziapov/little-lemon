@@ -122,14 +122,14 @@ nav > * {
   color: #000000;
 }
 
-.nav-link-last {
-  margin-right: 0; /* Remove margin for the last link */
+/* .nav-link-last {
+  margin-right: 0;
   text-decoration: none;
   font-family: Karla, sans-serif;
   font-size: 18px;
   font-weight: bold;
   color: #000000;
-}
+} */
 
 .hamburger-menu {
   display: none;
@@ -392,7 +392,7 @@ footer {
 
 /* Responsive Design */
 
-@media (max-width: 440px) {
+@media (max-width: 450px) {
   .container {
     grid-template-columns: 3% 1fr 3%;
     grid-template-rows: auto auto auto auto;

@@ -11,9 +11,9 @@ function Header() {
         <button>Reserve a table</button>
       </section>
       <section className="header-container2">
-        <box className="img-box">
+        <div className="img-box">
           <img src="/restaurantfood.jpg" alt="Little Lemon Logo" />
-        </box>
+        </div>
       </section>
     </header>
   );

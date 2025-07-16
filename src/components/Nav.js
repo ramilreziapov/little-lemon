@@ -1,6 +1,19 @@
+import React from "react";
+
 function Nav() {
+  const handleClick = (anchor) => () => {
+    const className = `${anchor}`;
+    const element = document.querySelector(`.${className}`);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        // block: "start",
+      });
+    }
+  };
+
   return (
-    <nav>
+    <nav className="nav-container">
       {/* Hamburger menu - hidden by default, shown in mobile */}
       <div className="hamburger-menu">
         <img src="/hamburger menu.svg" alt="Menu" />
@@ -11,17 +24,31 @@ function Nav() {
 
       <ul className="nav-list">
         <li className="nav-item">
-          <a href="#home" className="nav-link">
+          <a
+            href="#home"
+            className="nav-link"
+            onClick={(e) => {
+              e.preventDefault();
+              handleClick("nav-container")();
+            }}
+          >
             Home
           </a>
         </li>
-        <li className="nav-item">
+        {/*<li className="nav-item">
           <a href="#about" className="nav-link">
             About
           </a>
-        </li>
+        </li>*/}
         <li className="nav-item">
-          <a href="#menu" className="nav-link">
+          <a
+            href="#menu"
+            className="nav-link"
+            onClick={(e) => {
+              e.preventDefault();
+              handleClick("main-container")();
+            }}
+          >
             Menu
           </a>
         </li>
@@ -30,13 +57,21 @@ function Nav() {
             Reservations
           </a>
         </li>
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <a href="#order-online" className="nav-link">
             Order Online
           </a>
-        </li>
+        </li> */}
         <li className="nav-item">
-          <a href="#login" className="nav-link-last">
+          <a
+            href="#login"
+            className="nav-link"
+            style={{ marginRight: "0" }}
+            // onClick={(e) => {
+            //   e.preventDefault();
+            //   handleClick("footer")();
+            // }}
+          >
             Login
           </a>
         </li>

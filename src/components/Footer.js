@@ -2,11 +2,10 @@ function Footer() {
   return (
     <footer>
       <section className="footer-container">
-        <box className="footer-logo">
+        <div className="footer-logo">
           <img src="/logo2.png" alt="Little Lemon Logo" />
-        </box>
+        </div>
         <p>© 2025 Little Lemon.</p>
-        {/* <p>Privacy Policy | Terms of Service</p> */}
       </section>
     </footer>
   );

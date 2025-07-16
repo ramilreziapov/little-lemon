@@ -3,11 +3,11 @@ function Main() {
     <>
       <main>
         <section className="main-container">
-          <box className="main-container1">
+          <div className="main-container1">
             <h2>Specials</h2>
             <button>Online Menu</button>
-          </box>
-          <box className="main-container2">
+          </div>
+          <div className="main-container2">
             <div className="item1">
               <img
                 className="main-img"
@@ -68,7 +68,7 @@ function Main() {
                 </span>
               </h4>
             </div>
-          </box>
+          </div>
         </section>
       </main>
     </>
