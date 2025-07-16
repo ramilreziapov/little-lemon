@@ -35,11 +35,11 @@ function Nav() {
             Home
           </a>
         </li>
-        {/*<li className="nav-item">
+        <li className="nav-item">
           <a href="#about" className="nav-link">
             About
           </a>
-        </li>*/}
+        </li>
         <li className="nav-item">
           <a
             href="#menu"
@@ -57,21 +57,13 @@ function Nav() {
             Reservations
           </a>
         </li>
-        {/* <li className="nav-item">
+        <li className="nav-item">
           <a href="#order-online" className="nav-link">
             Order Online
           </a>
-        </li> */}
+        </li>
         <li className="nav-item">
-          <a
-            href="#login"
-            className="nav-link"
-            style={{ marginRight: "0" }}
-            // onClick={(e) => {
-            //   e.preventDefault();
-            //   handleClick("footer")();
-            // }}
-          >
+          <a href="#login" className="nav-link" style={{ marginRight: "0" }}>
             Login
           </a>
         </li>
