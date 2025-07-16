@@ -1,8 +1,13 @@
 function Footer() {
   return (
     <footer>
-      <p>© 2023 Little Lemon. All rights reserved.</p>
-      <p>Privacy Policy | Terms of Service</p>
+      <section className="footer-container">
+        <box className="footer-logo">
+          <img src="/logo2.png" alt="Little Lemon Logo" />
+        </box>
+        <p>© 2025 Little Lemon.</p>
+        {/* <p>Privacy Policy | Terms of Service</p> */}
+      </section>
     </footer>
   );
 }

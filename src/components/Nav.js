@@ -1,6 +1,10 @@
 function Nav() {
   return (
     <nav>
+      {/* Hamburger menu - hidden by default, shown in mobile */}
+      <div className="hamburger-menu">
+        <img src="/hamburger menu.svg" alt="Menu" />
+      </div>
       <section className="logo">
         <img src="/LogoLL.svg" alt="Little Lemon Logo" />
       </section>
@@ -37,9 +41,9 @@ function Nav() {
           </a>
         </li>
       </ul>
-      {/* Hamburger menu - hidden by default, shown in mobile */}
-      <div className="hamburger-menu">
-        <img src="/hamburger menu.svg" alt="Menu" />
+      {/* basket - hidden by default, shown in mobile */}
+      <div className="basket">
+        <img src="/basket.svg" alt="Basket" />
       </div>
     </nav>
   );
