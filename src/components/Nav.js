@@ -35,21 +35,41 @@ function Nav() {
             Home
           </a>
         </li>
-        <li className="nav-item">
-          <a href="#about" className="nav-link">
-            About
-          </a>
-        </li>
+
         <li className="nav-item">
           <a
-            href="#menu"
+            href="#specials"
             className="nav-link"
             onClick={(e) => {
               e.preventDefault();
               handleClick("main-container")();
             }}
           >
-            Menu
+            Specials
+          </a>
+        </li>
+        <li className="nav-item">
+          <a
+            href="#testimonials"
+            className="nav-link"
+            onClick={(e) => {
+              e.preventDefault();
+              handleClick("testimonials")();
+            }}
+          >
+            Testimonials
+          </a>
+        </li>
+        <li className="nav-item">
+          <a
+            href="#about"
+            className="nav-link"
+            onClick={(e) => {
+              e.preventDefault();
+              handleClick("about")();
+            }}
+          >
+            About
           </a>
         </li>
         <li className="nav-item">
@@ -57,16 +77,21 @@ function Nav() {
             Reservations
           </a>
         </li>
-        <li className="nav-item">
+        {/* <li className="nav-item">
+          <a href="#menu" className="nav-link">
+            Menu
+          </a>
+        </li> */}
+        {/* <li className="nav-item">
           <a href="#order-online" className="nav-link">
             Order Online
           </a>
-        </li>
-        <li className="nav-item">
+        </li> */}
+        {/* <li className="nav-item">
           <a href="#login" className="nav-link" style={{ marginRight: "0" }}>
             Login
           </a>
-        </li>
+        </li> */}
       </ul>
       {/* basket - hidden by default, shown in mobile */}
       <div className="basket">

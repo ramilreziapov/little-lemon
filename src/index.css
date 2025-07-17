@@ -288,7 +288,6 @@ main > * {
   width: 275px;
   height: 460px;
   border-radius: 16px 16px 0 0;
-  border-radius: 16px 16px 0 0;
   background-color: #edefee;
   margin: 0 0.8rem 1rem 0.8rem;
 }
@@ -351,23 +350,83 @@ main > * {
   grid-column: 1 / span 14;
   grid-template-columns: 3% repeat(12, 1fr) 3%;
   background-color: #46431e;
-  height: 730px;
+  /* height: 730px; */
 }
 
 .testimonials-container {
-  background-color: #4c6331;
+  background-color: #f4ce14;
   grid-column: 4 / span 8;
 }
 
-/* main {
-  background-color: #ffffff;
-  grid-column: 4 / span 8;
-
+.testimonials-container > * {
+  outline: 1px solid red; /* Visualize grid items */
 }
 
-main > * {
-  outline: 1px solid red; 
-} */
+.testimonials-container1 {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.testimonials-container1 > * {
+  outline: 1px solid blue; /* Visualize grid items */
+}
+
+.testimonials-container2 {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* align-items: flex-start; */
+}
+
+.testimonials-container2 .item1 {
+  display: flex;
+  flex-direction: column;
+  /* width: 275px; */
+  width: 200px;
+  /* height: 460px; */
+  height: 200px;
+  background-color: #edefee;
+  margin: 0 0.8rem 3.5rem 0.8rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.star-icon {
+  display: flex;
+  align-self: flex-start;
+  padding: 1rem;
+}
+
+.star {
+  font-size: 20px;
+  padding-right: 0.2rem;
+  color: #ddd;
+}
+
+.star.filled {
+  color: #ff7171;
+}
+
+.star::before {
+  content: "★";
+}
+
+.testimonials-container2 .item1 .main-img {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  /* align-self: center; */
+}
+
+.testimonials-container2 .item1 h4 {
+  display: flex;
+  /* align-items: center; */
+  /* padding: 0 0.3rem; */
+  font-family: "Karla", sans-serif;
+  font-weight: semibold;
+  font-size: 16px;
+}
 
 section.about {
   display: grid;
