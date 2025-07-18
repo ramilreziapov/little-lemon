@@ -12,10 +12,10 @@ function About() {
         </p>
         <br />
 
-        <p>
+        {/* <p>
           At Little Lemon, we believe in the power of food to bring people
           together.
-        </p>
+        </p> */}
       </section>
       <section className="about-container2">
         <div className="img-box1">
