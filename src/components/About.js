@@ -7,15 +7,9 @@ function About() {
         <p>
           Little Lemon is a family-owned Mediterranean restaurant located in
           Chicago. We focus on traditional recipes served with a modern twist.
-          Our mission is to provide a warm and welcoming atmosphere where guests
-          can enjoy delicious food and create lasting memories.
+          <br />
+          <p>Our mission is to provide a warm and welcoming atmosphere.</p>
         </p>
-        <br />
-
-        {/* <p>
-          At Little Lemon, we believe in the power of food to bring people
-          together.
-        </p> */}
       </section>
       <section className="about-container2">
         <div className="img-box1">
