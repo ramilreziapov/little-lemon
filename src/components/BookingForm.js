@@ -169,7 +169,9 @@ function BookingForm() {
                 value={formData.phone}
                 onChange={handleInputChange}
                 required
-                placeholder="Enter your phone number"
+                placeholder="Please enter a valid phone number"
+                pattern="^[+]?[\d\s\-\(\)\.]{7,20}$"
+                title="Phone number should be between 7 to 20 digits, can include +, -, and spaces."
               />
             </div>
           </div>
@@ -188,7 +190,7 @@ function BookingForm() {
 
           <div className="form-actions">
             <button type="submit" className="submit-btn">
-              Reserve Table
+              Reserve a Table
             </button>
           </div>
         </form>
