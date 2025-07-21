@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 function BookingForm() {
   const [formData, setFormData] = useState({
@@ -13,49 +13,12 @@ function BookingForm() {
     specialRequests: "",
   });
 
-  const [availableTimes, setAvailableTimes] = useState([]);
-
-  const initializeTimes = (selectedDate) => {
-    if (window.fetchAPI) {
-      const times = window.fetchAPI(new Date(selectedDate));
-      setAvailableTimes(times);
-    } else {
-      // console.warn("fetchAPI is not available, using fallback times.");
-      setAvailableTimes([
-        "17:00",
-        "17:30",
-        "18:00",
-        "18:30",
-        "19:00",
-        "19:30",
-        "20:00",
-        "20:30",
-        "21:00",
-        "21:30",
-        "22:00",
-      ]);
-    }
-  };
-
-  useEffect(() => {
-    const today = new Date().toISOString().split("T")[0];
-    initializeTimes(today);
-  }, []);
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
-
-    if (name === "date" && value) {
-      initializeTimes(value);
-      setFormData((prev) => ({
-        ...prev,
-        time: "", // Reset time when date changes
-      }));
-    }
   };
 
   const handleSubmit = (e) => {
@@ -64,6 +27,20 @@ function BookingForm() {
     // Here you would typically send the data to your backend
     alert("Reservation submitted successfully!");
   };
+
+  const timeSlots = [
+    "17:00",
+    "17:30",
+    "18:00",
+    "18:30",
+    "19:00",
+    "19:30",
+    "20:00",
+    "20:30",
+    "21:00",
+    "21:30",
+    "22:00",
+  ];
 
   const occasions = ["Birthday", "Anniversary", "Date", "Business", "Other"];
 
@@ -96,7 +73,7 @@ function BookingForm() {
                 required
               >
                 <option value="">Select a time</option>
-                {availableTimes.map((time) => (
+                {timeSlots.map((time) => (
                   <option key={time} value={time}>
                     {time}
                   </option>
