@@ -6,14 +6,33 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import Testimonials from "./components/Testimonials";
 import BookingPage from "./components/BookingPage";
+import ConfirmedBooking from "./components/ConfirmedBooking";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
+  const [bookingDetails, setBookingDetails] = useState(null);
+
+  const handleBookingConfirmation = (details) => {
+    setBookingDetails(details);
+    setCurrentPage("confirmed");
+  };
 
   const renderPage = () => {
     switch (currentPage) {
       case "booking":
-        return <BookingPage onBackToHome={() => setCurrentPage("home")} />;
+        return (
+          <BookingPage
+            onBackToHome={() => setCurrentPage("home")}
+            onBookingConfirmed={handleBookingConfirmation}
+          />
+        );
+      case "confirmed":
+        return (
+          <ConfirmedBooking
+            bookingDetails={bookingDetails}
+            onBackToHome={() => setCurrentPage("home")}
+          />
+        );
       case "home":
       default:
         return (

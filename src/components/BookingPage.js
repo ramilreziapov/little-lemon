@@ -1,7 +1,7 @@
 import React from "react";
 import BookingForm from "./BookingForm";
 
-function BookingPage({ onBackToHome }) {
+function BookingPage({ onBackToHome, onBookingConfirmed }) {
   return (
     <main className="booking-page">
       <div className="booking-hero">
@@ -17,7 +17,7 @@ function BookingPage({ onBackToHome }) {
           </p>
         </div>
       </div>
-      <BookingForm />
+      <BookingForm onBookingConfirmed={onBookingConfirmed} />
     </main>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function BookingForm() {
+function BookingForm({ onBookingConfirmed }) {
   const [formData, setFormData] = useState({
     date: "",
     time: "",
@@ -60,9 +60,15 @@ function BookingForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Booking submitted:", formData);
+    const isSubmitted = window.submitAPI ? window.submitAPI(formData) : true;
+    if (isSubmitted) {
+      onBookingConfirmed(formData);
+    } else {
+      alert("Failed to submit the reservation. Please try again.");
+    }
+    // console.log("Booking submitted:", formData);
     // Here you would typically send the data to your backend
-    alert("Reservation submitted successfully!");
+    // alert("Reservation submitted successfully!");
   };
 
   const occasions = ["Birthday", "Anniversary", "Date", "Business", "Other"];

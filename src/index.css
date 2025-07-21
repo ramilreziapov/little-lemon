@@ -851,3 +851,167 @@ footer {
     font-size: 36px;
   }
 }
+
+/* Confirmed Booking Page Styles */
+.confirmed-booking-page {
+  background-color: #ffffff;
+  grid-column: 1 / span 12;
+}
+
+.confirmed-booking-hero {
+  background-color: #495e57;
+  padding: 4rem 0;
+  display: grid;
+  grid-template-columns: 3% repeat(10, 1fr) 3%;
+}
+
+.confirmed-booking-container {
+  grid-column: 4 / span 6;
+  text-align: center;
+  color: #ffffff;
+}
+
+.confirmation-icon {
+  background-color: #f4ce14;
+  color: #495e57;
+  font-size: 4rem;
+  font-weight: bold;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+}
+
+.confirmed-booking-hero h1 {
+  font-family: "Markazi Text", serif;
+  font-size: 3rem;
+  color: #f4ce14;
+  margin-bottom: 1rem;
+}
+
+.confirmed-booking-hero h2 {
+  font-family: "Karla", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.confirmed-booking-hero p {
+  font-family: "Karla", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.booking-details-section {
+  padding: 4rem 0;
+  display: grid;
+  grid-template-columns: 3% repeat(10, 1fr) 3%;
+}
+
+.booking-details-container {
+  grid-column: 4 / span 6;
+}
+
+.booking-details-container h3 {
+  font-family: "Markazi Text", serif;
+  font-size: 2rem;
+  color: #495e57;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.details-grid {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.detail-item.full-width {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.detail-label {
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+  color: #495e57;
+}
+
+.detail-value {
+  font-family: "Karla", sans-serif;
+  color: #333333;
+}
+
+.full-width .detail-value {
+  margin-top: 0.5rem;
+}
+
+.confirmation-actions {
+  text-align: center;
+}
+
+.back-to-home-btn {
+  background-color: #f4ce14;
+  color: #495e57;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-to-home-btn:hover {
+  background-color: #495e57;
+  color: #f4ce14;
+  transform: translateY(-2px);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .confirmed-booking-container,
+  .booking-details-container {
+    grid-column: 2 / span 10;
+  }
+
+  .confirmation-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 3rem;
+  }
+
+  .confirmed-booking-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .details-grid {
+    padding: 1rem;
+  }
+
+  .detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .detail-value {
+    margin-top: 0.25rem;
+  }
+}
