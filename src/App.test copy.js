@@ -464,12 +464,12 @@ describe("BookingForm Validation Functions", () => {
     render(<BookingForm onBookingConfirmed={mockOnBookingConfirmed} />);
 
     const invalidEmails = [
-      "invalid-email", // No @ or domain
-      "@domain.com", // Missing local part
-      "user@", // Missing domain and TLD
-      "user@domain", // Missing TLD (dot)
-      "user.domain.com", // Missing @ symbol
-      "", // Empty string
+      "invalid-email",
+      "@domain.com",
+      "user@",
+      "user..name@domain.com",
+      "user@domain",
+      "",
     ];
 
     for (const email of invalidEmails) {
@@ -591,13 +591,10 @@ describe("BookingForm Validation Functions", () => {
   test("Form prevents submission with invalid data", () => {
     render(<BookingForm onBookingConfirmed={mockOnBookingConfirmed} />);
 
-    // Try to click the disabled submit button with empty form
-    const submitButton = screen.getByRole("button", {
-      name: "Reserve a Table",
-    });
-    fireEvent.click(submitButton);
+    // Try to submit with invalid data
+    fireEvent.submit(screen.getByRole("form"));
 
-    // Should not call the callback since button is disabled
+    // Should not call the callback
     expect(mockOnBookingConfirmed).not.toHaveBeenCalled();
   });
 

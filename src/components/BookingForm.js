@@ -37,6 +37,54 @@ function BookingForm({ onBookingConfirmed }) {
     }
   };
 
+  // const isFormValid = () => {
+  //   const { date, time, firstName, lastName, email, phone } = formData;
+
+  //   if (!date || !time || !firstName || !lastName || !email || !phone) {
+  //     return false;
+  //   }
+
+  //   return true;
+  // };
+
+  const isFormValid = () => {
+    const { date, time, firstName, lastName, email, phone } = formData;
+
+    // Check if required fields are filled
+    if (
+      !date ||
+      !time ||
+      !firstName.trim() ||
+      !lastName.trim() ||
+      !email.trim() ||
+      !phone.trim()
+    ) {
+      return false;
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.trim())) {
+      return false;
+    }
+
+    // Validate phone format (matches the pattern in the input)
+    const phoneRegex = /^[+]?[\d\s\-\(\)\.]{7,20}$/;
+    if (!phoneRegex.test(phone.trim())) {
+      return false;
+    }
+
+    // Validate date is not in the past
+    const selectedDate = new Date(date);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // Reset time to start of day for comparison
+    if (selectedDate < today) {
+      return false;
+    }
+
+    return true;
+  };
+
   useEffect(() => {
     const today = new Date().toISOString().split("T")[0];
     initializeTimes(today);
@@ -60,6 +108,12 @@ function BookingForm({ onBookingConfirmed }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!isFormValid()) {
+      alert("Please fill in all required fields correctly.");
+      return;
+    }
+
     const isSubmitted = window.submitAPI ? window.submitAPI(formData) : true;
     if (isSubmitted) {
       onBookingConfirmed(formData);
@@ -218,7 +272,11 @@ function BookingForm({ onBookingConfirmed }) {
           </div>
 
           <div className="form-actions">
-            <button type="submit" className="submit-btn">
+            <button
+              type="submit"
+              className={`submit-btn ${!isFormValid() ? "disabled" : ""}`}
+              disabled={!isFormValid()}
+            >
               Reserve a Table
             </button>
           </div>
