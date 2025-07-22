@@ -65,7 +65,11 @@ function ConfirmedBooking({ bookingDetails, onBackToHome }) {
           </div>
 
           <div className="confirmation-actions">
-            <button className="back-to-home-btn" onClick={onBackToHome}>
+            <button
+              className="back-to-home-btn"
+              onClick={onBackToHome}
+              aria-label="On Click"
+            >
               Back to Home
             </button>
           </div>

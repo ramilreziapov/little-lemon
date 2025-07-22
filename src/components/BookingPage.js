@@ -6,7 +6,11 @@ function BookingPage({ onBackToHome, onBookingConfirmed }) {
     <main className="booking-page">
       <div className="booking-hero">
         <div className="booking-hero-container">
-          <button className="back-btn" onClick={onBackToHome}>
+          <button
+            className="back-btn"
+            onClick={onBackToHome}
+            aria-label="On Click"
+          >
             ← Back to Home
           </button>
           <h1>Reserve a Table</h1>
