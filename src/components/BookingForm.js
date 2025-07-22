@@ -37,16 +37,6 @@ function BookingForm({ onBookingConfirmed }) {
     }
   };
 
-  // const isFormValid = () => {
-  //   const { date, time, firstName, lastName, email, phone } = formData;
-
-  //   if (!date || !time || !firstName || !lastName || !email || !phone) {
-  //     return false;
-  //   }
-
-  //   return true;
-  // };
-
   const isFormValid = () => {
     const { date, time, firstName, lastName, email, phone } = formData;
 

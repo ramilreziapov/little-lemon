@@ -1,13 +1,22 @@
 import React from "react";
 
 function Nav({ currentPage, onNavigate }) {
+  // const handleClick = (anchor) => () => {
+  //   const className = `${anchor}`;
+  //   const element = document.querySelector(`.${className}`);
+  //   if (element) {
+  //     element.scrollIntoView({
+  //       behavior: "smooth",
+  //       block: "start",
+  //     });
+  //   }
+  // };
+
   const handleClick = (anchor) => () => {
-    const className = `${anchor}-container`;
-    const element = document.querySelector(`.${className}`);
+    const element = document.querySelector(`.${anchor}`);
     if (element) {
       element.scrollIntoView({
         behavior: "smooth",
-        block: "start",
       });
     }
   };
@@ -35,15 +44,49 @@ function Nav({ currentPage, onNavigate }) {
           </a>
         </li>
         <li className="nav-item">
-          <a href="#about" className="nav-link">
-            About
+          <a
+            href="#order-online"
+            className="nav-link"
+            onClick={(e) => {
+              e.preventDefault();
+              onNavigate("home");
+              handleClick("main-container")();
+            }}
+          >
+            Specials
           </a>
         </li>
         <li className="nav-item">
+          <a
+            href="#testimonials"
+            className="nav-link"
+            onClick={(e) => {
+              e.preventDefault();
+              onNavigate("home");
+              handleClick("testimonials")();
+            }}
+          >
+            Testimonials
+          </a>
+        </li>
+        <li className="nav-item">
+          <a
+            href="#about"
+            className="nav-link"
+            onClick={(e) => {
+              e.preventDefault();
+              onNavigate("home");
+              handleClick("about")();
+            }}
+          >
+            About
+          </a>
+        </li>
+        {/* <li className="nav-item">
           <a href="#menu" className="nav-link">
             Menu
           </a>
-        </li>
+        </li> */}
         <li className="nav-item">
           <a
             href="#reservations"
@@ -56,12 +99,8 @@ function Nav({ currentPage, onNavigate }) {
             Reservations
           </a>
         </li>
-        <li className="nav-item">
-          <a href="#order-online" className="nav-link">
-            Order Online
-          </a>
-        </li>
-        <li className="nav-item">
+
+        {/* <li className="nav-item">
           <a
             href="#login"
             className="nav-link"
@@ -73,10 +112,10 @@ function Nav({ currentPage, onNavigate }) {
           >
             Footer
           </a>
-        </li>
+        </li> */}
       </ul>
       <div className="basket">
-        <img src="/basket.svg" alt="Basket" />
+        <img src="/basket.svg" alt="Basket" />+
       </div>
     </nav>
   );
