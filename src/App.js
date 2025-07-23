@@ -15,6 +15,7 @@ function App() {
   const handleBookingConfirmation = (details) => {
     setBookingDetails(details);
     setCurrentPage("confirmed");
+    window.scrollTo(0, 0);
   };
 
   const renderPage = () => {

@@ -181,7 +181,7 @@ function BookingForm({ onBookingConfirmed }) {
                 value={formData.occasion}
                 onChange={handleInputChange}
               >
-                <option value="">Select occasion (optional)</option>
+                <option value="">Select occasion</option>
                 {occasions.map((occasion) => (
                   <option key={occasion} value={occasion}>
                     {occasion}
